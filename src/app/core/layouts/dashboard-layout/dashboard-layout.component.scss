@@ -1,0 +1,49 @@
+@mixin sticky {
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+
+  &.panel-position-left {
+    flex-direction: row;
+  }
+
+  &.panel-position-right {
+    flex-direction: row-reverse;
+  }
+
+  .left-column {
+    @include sticky();
+    top: 0;
+    transition: width 0.3s;
+    overflow: hidden;
+
+    &.open {
+      width: 350px;
+    }
+
+    &.close {
+      width: 0px;
+    }
+
+    &.collapse {
+      width: 75px;
+    }
+  }
+
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow-y: auto;
+
+    .navigation-bar {
+      @include sticky();
+      top: 0;
+    }
+  }
+}

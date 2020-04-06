@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+html, body, ul, p, h1, h2, h3, h4, h5, h6, blockquote {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
