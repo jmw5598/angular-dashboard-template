@@ -19,19 +19,19 @@
   .left-column {
     @include sticky();
     top: 0;
-    transition: width 0.3s;
+    transition: flex-basis 0.3s;
     overflow: hidden;
 
     &.open {
-      width: 350px;
+      flex-basis: 350px;
     }
 
     &.close {
-      width: 0px;
+      flex-basis: 0px;
     }
 
     &.collapse {
-      width: 75px;
+      flex-basis: 75px;
     }
   }
 
