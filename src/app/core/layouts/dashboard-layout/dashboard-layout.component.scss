@@ -23,15 +23,15 @@
     overflow: hidden;
 
     &.open {
-      flex-basis: 350px;
+      flex: 0 0 350px;
     }
 
     &.close {
-      flex-basis: 0px;
+      flex: 0 0 0px;
     }
 
     &.collapse {
-      flex-basis: 75px;
+      flex: 0 0 75px;
     }
   }
 
