@@ -24,3 +24,23 @@ a {
   font-weight: 400;
   text-decoration: none;
 }
+
+.page-container {
+  margin: 1.5rem 1.5rem;
+}
+
+.card {
+  &.card-body {
+    background:#FFFFFF;
+    color: #444;
+    display: flex;
+    flex-grow: 1;
+    transition: background 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      background: #d9d9e2;
+      color: #000;
+    }
+  }
+}

@@ -35,12 +35,12 @@ export class DashboardLayoutComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     const width: number = window.innerWidth;
-    if (width < 768) 
+    if ((this.currentPanelState === SidePanelState.OPEN || this.currentPanelState === SidePanelState.COLLAPSE) && width < 768) 
       this._sidePanelService.changeState(SidePanelState.CLOSE);
-    else if (width < 991)
+    else if (this.currentPanelState === SidePanelState.OPEN && width < 991)
       this._sidePanelService.changeState(SidePanelState.COLLAPSE);
-    else
-      this._sidePanelService.changeState(SidePanelState.OPEN);
+    //else
+      //this._sidePanelService.changeState(SidePanelState.OPEN);
   }
   
   ngOnDestroy(): void {
