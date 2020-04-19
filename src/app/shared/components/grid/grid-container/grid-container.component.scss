@@ -9,10 +9,9 @@
 }
 
 :host ::ng-deep  [gridCell] {
-  display: grid;
+  display: block;
   font-size: 20px;
   padding: 20px;
-  place-items: center;
 }
 
 @media only screen and (max-width: 767px) {
